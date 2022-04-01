@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         case .cube:
             entity.spin()
         case .sphere:
-            entity.jiggle()
+            entity.beat()
         }
     }
 }
@@ -89,7 +89,7 @@ extension ModelEntity {
         return modelKindComponent.kind
     }
     
-    func jiggle() {
+    func beat() {
         var transform = Transform.identity
         let scale: Float = 0.85
         transform.scale = .init(scale, scale, scale)
